@@ -1,0 +1,123 @@
+/* ===== TAKA ALLIANCE — GitHub Pages ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0e1a;--surface:#111827;--card:#1a2236;--card-hover:#222d45;
+  --gold:#f5c518;--purple:#a855f7;--green:#22c55e;--cyan:#06b6d4;
+  --red:#ef4444;--pink:#ec4899;--orange:#f97316;--blue:#3b82f6;
+  --text:#e2e8f0;--muted:#64748b;--border:rgba(255,255,255,.06);
+  --radius:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:.5px}
+.nav-logo .dot{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--orange));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;color:#000}
+.nav-logo .taka{color:var(--gold)}
+.nav-links{display:flex;gap:28px;font-size:.9rem;font-weight:500}
+.nav-links a{color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang-btn{padding:6px 14px;border-radius:20px;font-size:.8rem;font-weight:600;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s}
+.lang-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
+.play-btn{padding:8px 20px;border-radius:10px;background:var(--gold);color:#000;font-weight:700;font-size:.85rem;border:none;cursor:pointer;transition:transform .2s}
+.play-btn:hover{transform:scale(1.05)}
+
+/* HERO */
+.hero{max-width:1200px;margin:0 auto;padding:80px 24px 40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:24px;padding:6px 16px;font-size:.8rem;color:var(--green);font-weight:600;margin-bottom:20px}
+.hero-badge .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:3.2rem;font-weight:900;line-height:1.1;margin-bottom:20px}
+.hero h1 .taka{color:var(--gold)}
+.hero h1 .bd{color:var(--purple)}
+.hero-desc{font-size:1.05rem;color:var(--muted);line-height:1.7;margin-bottom:32px;max-width:520px}
+.hero-ctas{display:flex;gap:14px;margin-bottom:48px;flex-wrap:wrap}
+.cta-primary{padding:14px 28px;border-radius:12px;background:var(--gold);color:#000;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,197,24,.25)}
+.cta-secondary{padding:14px 28px;border-radius:12px;background:transparent;color:var(--gold);font-weight:700;font-size:.95rem;border:2px solid var(--gold);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.cta-secondary:hover{background:rgba(245,197,24,.1)}
+
+/* STATS */
+.stats{display:flex;gap:40px;flex-wrap:wrap}
+.stat-item .num{font-size:2.2rem;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-item .label{font-size:.8rem;color:var(--muted);font-weight:500}
+
+/* BRAND GRID */
+.brands-section{max-width:1200px;margin:0 auto;padding:60px 24px 80px}
+.section-header{text-align:center;margin-bottom:48px}
+.section-header h2{font-size:2rem;font-weight:800;margin-bottom:8px}
+.section-header p{color:var(--muted);font-size:1rem}
+.brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.brand-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:all .3s;cursor:pointer;position:relative;overflow:hidden}
+.brand-card:hover{background:var(--card-hover);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:rgba(255,255,255,.1)}
+.brand-card .avatar{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;color:#fff;margin-bottom:16px}
+.brand-card h3{font-size:1.15rem;font-weight:700;margin-bottom:4px}
+.brand-card .tagline{font-size:.85rem;color:var(--muted);margin-bottom:14px}
+.brand-card .badge{display:inline-block;padding:4px 10px;border-radius:6px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+
+/* Badge colors */
+.badge-hot{background:rgba(239,68,68,.15);color:var(--red)}
+.badge-popular{background:rgba(6,182,212,.15);color:var(--cyan)}
+.badge-featured{background:rgba(245,197,24,.15);color:var(--gold)}
+.badge-live{background:rgba(239,68,68,.15);color:var(--red)}
+.badge-new{background:rgba(34,197,94,.15);color:var(--green)}
+.badge-rtp{background:rgba(34,197,94,.15);color:var(--green)}
+.badge-vip{background:rgba(168,85,247,.15);color:var(--purple)}
+.badge-fast{background:rgba(6,182,212,.15);color:var(--cyan)}
+.badge-trusted{background:rgba(59,130,246,.15);color:var(--blue)}
+.badge-bonus{background:rgba(245,197,24,.15);color:var(--gold)}
+
+/* Avatar colors per brand */
+.av-ak44{background:linear-gradient(135deg,#f97316,#ea580c)}
+.av-aq999{background:linear-gradient(135deg,#ec4899,#be185d)}
+.av-bb44{background:linear-gradient(135deg,#22c55e,#15803d)}
+.av-bd222{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
+.av-bk33{background:linear-gradient(135deg,#ef4444,#b91c1c)}
+.av-cd33{background:linear-gradient(135deg,#06b6d4,#0e7490)}
+.av-cd44{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
+.av-ck33{background:linear-gradient(135deg,#14b8a6,#0d9488)}
+.av-ck44{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.av-cv666{background:linear-gradient(135deg,#e11d48,#9f1239)}
+.av-ea77{background:linear-gradient(135deg,#06b6d4,#0891b2)}
+.av-eg333{background:linear-gradient(135deg,#eab308,#ca8a04)}
+.av-ek333{background:linear-gradient(135deg,#a855f7,#7c3aed)}
+.av-gb444{background:linear-gradient(135deg,#10b981,#059669)}
+.av-gk222{background:linear-gradient(135deg,#6366f1,#4f46e5)}
+.av-l444{background:linear-gradient(135deg,#f43f5e,#e11d48)}
+.av-tk11{background:linear-gradient(135deg,#0ea5e9,#0284c7)}
+.av-tk666{background:linear-gradient(135deg,#d946ef,#a21caf)}
+.av-tk999{background:linear-gradient(135deg,#f97316,#c2410c)}
+.av-tk1971{background:linear-gradient(135deg,#64748b,#475569)}
+
+/* FEATURES */
+.features{max-width:1200px;margin:0 auto;padding:40px 24px 80px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;text-align:center}
+.feature-card .icon{font-size:2rem;margin-bottom:12px}
+.feature-card h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.feature-card p{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+/* FOOTER */
+.footer{background:var(--surface);border-top:1px solid var(--border);padding:40px 24px;text-align:center}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer p{color:var(--muted);font-size:.85rem;line-height:1.8}
+.footer .brand-list{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.footer .brand-list a{padding:4px 10px;border-radius:6px;background:rgba(255,255,255,.05);font-size:.75rem;color:var(--muted);transition:all .2s}
+.footer .brand-list a:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding:48px 16px 24px;text-align:center}
+  .hero h1{font-size:2.2rem}
+  .hero-ctas{justify-content:center}
+  .stats{justify-content:center}
+  .nav-links{display:none}
+  .brand-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .brand-card{padding:16px}
+  .brand-card .avatar{width:40px;height:40px;font-size:1rem}
+  .brand-card h3{font-size:1rem}
+}
